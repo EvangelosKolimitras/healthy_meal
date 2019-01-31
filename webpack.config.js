@@ -27,6 +27,18 @@ module.exports = {
 
     plugins : [
         new htmlWebpackPlugin()
-    ]
+    ],
+
+    module : {
+        rules : [
+            {
+                test : /\.js$/,
+                exclude : /node_modules/,
+                use : {
+                    loader : 'babel-loader'
+                }
+            }
+        ]
+    }
         
 };
