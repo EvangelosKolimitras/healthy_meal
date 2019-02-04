@@ -28,7 +28,9 @@ module.exports = {
     // Plugins
 
     plugins : [ 
-        new htmlWebpackPlugin()
+        new htmlWebpackPlugin({
+            template : './src/index.html'
+        })
     ],
 
     module: {

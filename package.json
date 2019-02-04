@@ -1,7 +1,7 @@
 {
-  "name": "testing_react",
+  "name": "Application_setup",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a boileplate created with webpack for a quick set up of a project with the most basic configurations needed for faster development.",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --open",
@@ -11,8 +11,14 @@
     "type": "git",
     "url": "git+https://github.com/EvangelosKolimitras/testing_react.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webpack",
+    "nodejs",
+    "javascript",
+    "scss",
+    "babel"
+  ],
+  "author": "Evangelos Kolimitras",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/EvangelosKolimitras/testing_react/issues"

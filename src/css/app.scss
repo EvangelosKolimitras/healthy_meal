@@ -1,0 +1,29 @@
+@import "./colors", "./generall", "./imports", "./social_list";
+
+.heading {
+    width: 40em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: .1em solid $white;
+    text-align: center;
+    
+    &-h1 {
+        color : inherit;
+        text-transform: capitalize;
+        letter-spacing: .2em; 
+        text-shadow: .1em .1em 1em #ffeeff;
+        font-size: 4em;
+    }
+}
+
+p {
+    color : inherit;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+    text-transform: capitalize;
+    font-size: 2em;
+}
