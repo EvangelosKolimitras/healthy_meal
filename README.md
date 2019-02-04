@@ -1,1 +1,1 @@
-# testing_react
+# Application set up
