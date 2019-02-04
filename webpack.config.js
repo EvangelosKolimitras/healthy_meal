@@ -1,47 +1,52 @@
 const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
+
 module.exports = {
 
     // Mode configuration
-    // Development or Production
-
-    mode: 'development',
+    // development or production
+    mode : 'development',
     
 
     //Server Configurations
     devServer : {
-        contentBase : path.join(__dirname, 'dist'),
+        contentBase : path.join( __dirname , 'dist'),
         compress : true,
         port: 9000
     },
 
     // Input & Output
     entry : [
-        '@babel/polyfill',
-        './src/js/index.js'
+        './src/js/app.js'
     ],
-    
+
     output : {
-        path : path.resolve(__dirname, 'dist'),
+        path : path.resolve( __dirname , 'dist'),
         filename : './src/js/bundle.js'
     },
 
     // Plugins
 
-    plugins : [
+    plugins : [ 
         new htmlWebpackPlugin()
     ],
 
-    module : {
-        rules : [
+    module: {
+        rules: [
+            {   test: /\.js$/,
+                exclude: /node_modules/,
+                use: ["babel-loader"]
+            },
+            
             {
-                test : /\.js$/,
-                exclude : /node_modules/,
-                use : {
-                    loader : 'babel-loader'
-                }
+                test : /\.(sc|sa|c)ss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
-    }
+      }
         
 };
