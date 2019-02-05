@@ -2,7 +2,6 @@ const path = require('path');
 const htmlWebpackPlugin = require('html-webpack-plugin');
 const DuplicatePackageCheckerPlugin = require("duplicate-package-checker-webpack-plugin");
 
-
 module.exports = {
 
     // Mode configuration
@@ -29,20 +28,6 @@ module.exports = {
 
     // Plugins
 
-    plugins: [
-
-        new htmlWebpackPlugin({
-            template: './src/index.html',
-            hash: true
-        }),
-
-        new DuplicatePackageCheckerPlugin({
-            emitError: true, // Emit errors instead of warnings (default: false)
-            strict: false// Warn also if major versions differ (default: true)
-        })
-
-    ],
-
     module: {
         rules: [
             {
@@ -58,19 +43,22 @@ module.exports = {
                     'css-loader',
                     'sass-loader'
                 ]
-            },
-
-            {
-                test: /\.(png|jpg|gif)$/,
-                use: [
-                    {
-                        loader: 'file-loader',
-                        options: {},
-                    },
-                ],
             }
-            
-        ]
-    }
 
+        ]
+    },
+
+    plugins: [
+
+        new htmlWebpackPlugin({
+            template: './src/index.html',
+            hash: true
+        }),
+
+        new DuplicatePackageCheckerPlugin({
+            emitError: true, // Emit errors instead of warnings (default: false)
+            strict: false// Warn also if major versions differ (default: true)
+        })
+    ]
+    
 };
