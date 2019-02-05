@@ -11,13 +11,14 @@ module.exports = {
 
     //Server Configurations
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join( __dirname , 'dist' ),
         compress: true,
         port: 9000
     },
 
     // Input & Output
     entry: [
+        '@babel/polyfill',
         './src/js/app.js'
     ],
 
