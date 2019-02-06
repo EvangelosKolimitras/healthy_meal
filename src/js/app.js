@@ -1,7 +1,11 @@
 const scss = require('../css/app.scss');
 import Search from './search';
 
-const search = new Search('pizza');
+const search = new Search('beaf');
 
-console.log(search);
+
+const state = {};
+
+const search = Search('pizza');
+
 search.getResults();

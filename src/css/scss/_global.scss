@@ -1,17 +1,23 @@
-html, body{
+html{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     font-size: 10px;
     font-weight: lighter;
     font-family: 'Megrim', cursive;
 }
 
 body {
+    margin: 1em;
+    padding: 1em;
+    box-sizing: border-box;
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-color: $black;
+    background-image: $primary_background_color;
+    -webkit-animation: AnimationName 30s ease infinite;
+    -moz-animation: AnimationName 30s ease infinite;
+    animation: AnimationName 30s ease infinite;
+    background-size: 2400% 2400%;
     color : $white;
 }
 a{

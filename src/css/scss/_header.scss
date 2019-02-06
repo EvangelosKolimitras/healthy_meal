@@ -1,0 +1,65 @@
+.header {
+    border-bottom : .1em solid $primary_font_color;
+    width: 100%;
+    height: 15%;
+    padding: 0 1em;
+    
+    &__title {
+        color : $primary_font_color;
+        font-size: 2.5em;
+    }
+
+    &__search--form {
+        text-align: center;
+
+        &__field {
+            background: transparent;
+            padding: 1em;
+            width: 30%;
+            border: none;
+            border-bottom: .1em solid $primary_font_color;
+            outline: none;
+            color: inherit;
+            letter-spacing: .1em;
+            transition: .5s;
+
+            &:active, &:focus, &:hover {
+                width: 50%;
+            }
+
+            &::placeholder {
+                font-family: 'Megrim', cursive;
+                color: inherit;
+                font-weight: bold;
+                letter-spacing: inherit;
+            }
+
+        }
+
+        &__search__btn {
+            background: transparent;
+            border: none;
+            padding: 1em;
+            color: inherit;
+            font-weight: bold;
+            font-family: inherit;
+            width: 10%;
+            outline: none;
+            transform: scale(1.1);
+            transition: .3s all;
+            text-shadow: .5em .5em 1em $black;
+            letter-spacing: .1em;
+            
+            &:active {
+                transform: scale(1);
+                text-shadow: .1em .1em .1em $black;
+            }
+
+            &:hover {
+                transform: scale(1.3);
+                cursor: pointer;
+                text-shadow: .1em .1em .1em $black;
+            }
+        }
+    }
+}
