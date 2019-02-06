@@ -1,6 +1,8 @@
 import axios from 'axios';
 
+// The Search class constructor simple creates anasyn/await request to the endpoint and gets the response back.
 export default class Search {
+
     constructor(query) {
         this.query = query;
     }
@@ -15,7 +17,6 @@ export default class Search {
             
             const response = await axios(url);
             this.result = response.data.recipes;
-            // console.log(this.result);
             
         }   
     
