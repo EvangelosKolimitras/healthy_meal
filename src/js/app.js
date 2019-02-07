@@ -1,9 +1,11 @@
 const scss = require('../css/app.scss');
-import Search from './search';
 
-const state = {}; 
+import Search from './SearchC';
+import { elements as el } from "./base";
 
-const controlSearch = async () => {
+export const state = {}; 
+
+export const controlSearch = async () => {
 
     //Query the responed data from the view.
     const query = 'pizza';
@@ -20,12 +22,10 @@ const controlSearch = async () => {
 
         console.log(state.search.result);
     }
-    
-    
+
 }
 
-
-document.querySelector(".header__search--form").addEventListener('submit', e => {
+el.form.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
-})
+});
