@@ -13,11 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     position: relative;
-    background-image: $primary_background_color;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
-    background-size: 2400% 2400%;
+    background-color: $primary_background_color;
     color : $white;
 }
 a{

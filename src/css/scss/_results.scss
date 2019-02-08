@@ -1,0 +1,21 @@
+.results {
+
+    &_link {
+
+    }
+
+    &__fig {
+
+        & > img {
+            width: 100px;
+            height: 100px;
+            border-radius: 10px;
+        }
+
+    }
+
+    &_author {
+
+    }
+    
+}
