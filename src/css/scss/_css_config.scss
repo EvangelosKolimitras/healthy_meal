@@ -1,0 +1,18 @@
+// Configurations
+$config : (
+
+    // Global Dimensions
+
+    container_dimensios : (
+        container-width: $container_width,
+        container-height: $container_height
+    ),
+
+    // Global Fonts
+
+    font : (
+        global-font-size : $global_font_size,
+        global-font-family:  $global_font_family,
+        global-font-weight : $global_font_weight,
+    )
+);

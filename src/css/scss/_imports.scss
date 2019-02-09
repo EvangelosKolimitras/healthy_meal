@@ -1,0 +1,18 @@
+@import "var";
+@import "css_config";
+@import "functions";
+@import "mixins";
+@import "fonts";
+@import "colors";
+@import "global";
+@import "keyframes";
+@import "scrollbar";
+
+@import "layout";
+@import "header";
+
+@import "main", 
+        "results",
+        "recipe";
+
+@import "footer";

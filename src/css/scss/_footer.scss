@@ -1,0 +1,30 @@
+.footer {
+    @include positioning(absolute, null, 0, null, 0, 0, 0 );
+    
+    width: calc(
+        #{
+            map-get(
+                map-get(
+                    $config,
+                    index-to-key(1)
+                ), container-width
+            )
+        } 
+    );
+
+    height: calc(
+        #{
+            map-get(
+                map-get(
+                    $config,
+                    index-to-key(1)
+                ), container-height
+            )
+        } - 90%
+    );
+
+    text-align: center;
+    padding: 3rem 0;
+    font-size: 2rem;
+
+}

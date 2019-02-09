@@ -1,0 +1,45 @@
+.recipe {
+    @include positioning(relative, 0, 50%, null, null, -50%, 0);
+    
+    &-fig {
+       
+        width: 100%;
+        height: 100%;
+
+        @include positioning(relative, 0, 50%, null, null, -50%, 0);
+
+        & > img {
+            max-width: 100%;
+            max-height: 100%;
+            transition: .5s;
+            
+            &:hover  {
+                transform: scale(1.2);
+                
+             }
+        }
+
+        &__name {
+            @include positioning(absolute, -100%, 0, null, null, 0, 0);
+            background-color: $primary_background_color;
+            color: $white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            
+        }
+    }
+
+    &-data {
+        transition: 1s;
+        @include positioning(relative, 0%, 50%, null, null, -50%, 0);
+        width: 100%;
+        height: 20%;
+        padding: 1rem 0 ;
+        text-align: center; 
+
+        &-author {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+    }
+}
