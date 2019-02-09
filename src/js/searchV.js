@@ -17,18 +17,18 @@ export const clearResultList = () => {
 const renderRecipe = recipe => {
     const html = `
         <li>
-            <a class="results__link" href="${recipe.recipe_id}">
-                <figure class="results__fig">
+            <div class="results__list--recipe" href="${recipe.recipe_id}">
+                <figure class="results__list--recipe-fig">
+                <h4 class="results__list--recipe-fig__name">${recipe.title}</h4>
                     <img src="${recipe.image_url}" alt="${recipe.title}">
                 </figure>
-                <div class="results__data">
-                    <h4 class="results__name">${recipe.title}</h4>
-                    <p class="results__author">${recipe.publisher}</p>
+                <div class="results__list--recipe-data">
+                    <p class="results__list--recipe-data-author">${recipe.publisher}</p>
                 </div>
-            </a>
+            </div>
         </li>
     `;
-    el.searchResultsList.insertAdjacentHTML('beforeend', html)
+    el.searchResultsList.insertAdjacentHTML('beforeend', html);
 };
 
 // Loop that renders all the return items from the API call
