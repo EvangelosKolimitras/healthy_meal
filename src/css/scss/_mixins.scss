@@ -2,12 +2,29 @@
 @mixin translate-center($tx:null, $ty:null) {
     transform: translate($tx, $ty)
 };
-
+// Mixin for positiong an element
 @mixin positioning($p:null, $t:null, $l:null, $r:null, $b:null, $x:null, $y:null) {
     position: $p;
-    top : $t;
+    top: $t;    
     left: $l;
     right : $r;
     bottom: $b;
+
     @include translate-center( $x, $y )
+    
+};
+
+// Mixin for breakpoints testing
+@mixin max-breaks($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+        $breakpoint_value : map-get($breakpoints, $breakpoint );
+
+        @media (max-width: $breakpoint_value) {
+            @content;
+        }
+
+    }@else {
+        @warn 'Invalid breakpoint. Please check the breakpointsmap for more details. /n Breakpoint error #{$breakpoint}.';
+    }
 };

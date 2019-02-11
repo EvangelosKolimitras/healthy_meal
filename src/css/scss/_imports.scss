@@ -1,7 +1,9 @@
 @import "var";
 @import "css_config";
-@import "functions";
+
+@import "media_queries";
 @import "mixins";
+@import "functions";
 @import "fonts";
 @import "colors";
 @import "global";
@@ -9,7 +11,8 @@
 @import "scrollbar";
 
 @import "layout";
-@import "header";
+@import "topbar";
+@import "searchbar";
 
 @import "main", 
         "results",

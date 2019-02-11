@@ -19,6 +19,7 @@ const renderRecipe = recipe => {
         <li>
             <div class="results__list--recipe" href="${recipe.recipe_id}">
                 <figure class="results__list--recipe-fig">
+                <i class="far fa-heart results__list--recipe-fig__heart"></i>
                 <h4 class="results__list--recipe-fig__name">${recipe.title}</h4>
                     <img src="${recipe.image_url}" alt="${recipe.title}">
                 </figure>

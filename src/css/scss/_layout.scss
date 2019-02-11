@@ -1,17 +1,11 @@
 .container {
-    width: map-get(
-        map-get(
-            $config,
-            index-to-key(1)
-        ), container-width
-    );
-    height: map-get(
-        map-get(
-            $config,
-            index-to-key(1)
-        ), container-height
-    );
+    width: map-get( map-get( $config, index-to-key(1) ), container-width );
+    height: map-get( map-get( $config, index-to-key(1) ), container-height );
 
-    @include positioning(relative, 5%, 50%, 0, 0, -50%, 0)
+    overflow: hidden;
+    @include positioning(relative, 5%, 50%, 0, 0, -50%, 0);
   
+    @include max-breaks(sm) {
+        height: 70%;
+    };
 }

@@ -29,6 +29,7 @@ body {
     @include positioning(relative, 0, 0, null, null, 0, 0);
     background-color: $primary_background_color;
     color : $white;
+
 }
 
 a {
@@ -39,3 +40,4 @@ a {
 li {
     list-style-type: none;
 }
+

@@ -1,37 +1,20 @@
-.header {
-    padding: 1rem 1rem;
+.searchbar {
+    // padding: 1rem;
     @include positioning(relative, 0, 50%, null, null, -50%, 0);
-
-    width: map-get(
-        map-get(
-            $config,
-            index-to-key(1)
-        ), container-width
-    );
-
-    height: calc(
-        #{
-            map-get(
-                map-get(
-                    $config,
-                    index-to-key(1)
-                ), container-height
-            )
-        } - 90%
-    );
-
-    &__title {
-        color : $primary_font_color;
-        font-size: 3em;
-    }
-
+    width: map-get( map-get( $config, index-to-key(1) ), container-width );
+    height: calc( #{ map-get( map-get( $config, index-to-key(1) ), container-height ) } - 90% );
+    
     &__search--form {
-        text-align: center;
+
+        width: 50%;
+        @include positioning(absolute, 50%, 50%, null, null, -50%, -50%);
+
+        text-align: left;
 
         &__field {
             background: transparent;
             padding: 1em;
-            width: 30%;
+            width: 70%;
             border: none;
             border-bottom: .1em solid $primary_font_color;
             outline: none;
@@ -40,7 +23,7 @@
             transition: .5s;
 
             &:active, &:focus, &:hover {
-                width: 35%;
+                width: 80%;
             }
 
             &::placeholder {
@@ -76,6 +59,22 @@
                 cursor: pointer;
                 text-shadow: .1em .1em .1em $black;
             }
+
+            @include max-breaks(sm) {
+                padding: 1em;
+                transform: scale(1);
+            }
+
+        }
+
+        @include max-breaks(sm) {
+            width: 95%;
         }
     }
+
+    @include max-breaks(sm) {
+        margin-top: 1rem;
+        width: 95%;
+    }
+
 }

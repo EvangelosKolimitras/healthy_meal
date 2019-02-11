@@ -44,6 +44,16 @@ el.form.addEventListener('submit', e => {
     controlSearch();
 });
 
+// Make heart color active
+const heartActive = e => {
+    el.heart.classList.remove('far');
+    el.heart.classList.add('fas');
+    el.heart.getElementsByClassName.opacity = 1;
+};
+
+el.heart.addEventListener('click', heartActive);
+
+
 const footer = () => {
     const footerMarkup = `
     <footer class='footer'>
@@ -51,7 +61,7 @@ const footer = () => {
         <a href="http://food2fork.com" target="_blank" class="link">Food2Fork.com</a>.
     </footer>
     `;
-    el.container.insertAdjacentHTML('beforeend', footerMarkup);
+    el.body.insertAdjacentHTML('beforeend', footerMarkup);
     
 };
 footer();

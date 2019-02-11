@@ -6,31 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Healthy Food</title>
+    <link rel="shortcut icon" href="https://hriainstitute.org/images/blog/healthy_community_icon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 
 <body>
+    <header class="header">
+        <div class="topbar">
+            <div class="topbar__logo">
+                <div class="topbar__logo--img">
+                    <img src="https://hriainstitute.org/images/blog/healthy_community_icon.png" alt="">
+                </div>
+                <h1 class="topbar__logo--title">happy meal</h1>
+            </div>
+        </div>
+    </header>
     <div class="container">
 
-        <header class="header">
-            <a href="./index.html">
-                <!-- <img src="http://cdn.onlinewebfonts.com/svg/img_174726.png" style="width:50px" alt=""> -->
-                <h1 class="header__title">happy meal</h1>
-            </a>
-
-            <form id="search" class="header__search--form">
-                <input type="text" class="header__search--form__field" placeholder="Search over 1,000,000 recipes...">
-                <button class="btn header__search--form__search__btn"> Search </button>
+        <div class="searchbar">
+            <form id="search" class="searchbar__search--form">
+                <input type="text" class="searchbar__search--form__field"
+                    placeholder="Search over 1,000,000 recipes...">
+                <button class="btn searchbar__search--form__search__btn"> Search </button>
             </form>
+        </div>
 
-            <div class="header__likes">
-                <div class="header__likes--field">
-                    <svg class="header__likes--field__icon">
-                        <use href="img/icons.svg#icon-heart"></use>
-                    </svg>
-                </div>
-                <div class="header__likes--panel">
-                    <ul class="header__likes--panel__likes__list">
-                        <!--
+       <!-- <div class="header__likes">
+            <div class="header__likes--field">
+                <svg class="header__likes--field__icon">
+                    <use href="img/icons.svg#icon-heart"></use>
+                </svg>
+            </div>
+            <div class="header__likes--panel">
+                <ul class="header__likes--panel__likes__list">
+                    
                         <li>
                             <a class="likes__link" href="#23456">
                                 <figure class="likes__fig">
@@ -42,11 +52,11 @@
                                 </div>
                             </a>
                         </li>
-                        -->
-                    </ul>
-                </div>
+                       
+                </ul>
             </div>
-        </header>
+        </div> -->
+
 
         <main class="main">
             <div class="results">
@@ -55,10 +65,12 @@
                     <li>
                         <div class="results__list--recipe" href="#76767">
                             <figure class="results__list--recipe-fig">
+                                <i class="far fa-heart results__list--recipe-fig__heart"></i>
                                 <h4 class="results__list--recipe-fig__name">Pasta with Tomato ...</h4>
                                 <img src="https://entrepreneurhandbook.co.uk/wp-content/uploads/2017/08/Stock-Photography.jpg"
                                     alt="Test">
                             </figure>
+
                             <div class="results__list--recipe-data">
                                 <p class="results__list--recipe-data-author">Spicy Perspective</p>
                             </div>

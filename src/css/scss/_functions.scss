@@ -1,5 +1,4 @@
-@function index-to-key($index) {
-    $keys : map-keys($config);
-
-    @return nth($keys, $index)
-}
+// Seach for a key 
+@function index-to-key($i) {
+    @return nth( map-keys($config), $i)
+};
